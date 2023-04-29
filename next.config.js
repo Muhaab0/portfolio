@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 module.exports = () => {
   swcMinify: true
-  basePath: "/portofolio"
+  basePath: "/PortofolioFront"
   const rewrites = () => {
     return [
       {

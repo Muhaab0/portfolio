@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 module.exports = () => {
-  basePath: '/portofolio'
+  basePath: '/PortofolioFront'
   const rewrites = () => {
     return [
       {

@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 module.exports = () => {
+  basePath: '/portofolio'
   const rewrites = () => {
     return [
       {
@@ -13,8 +14,3 @@ module.exports = () => {
   }
 }
 
-const nextConfig={
-  basePath: '/portofolio'
-}
-
-export default nextConfig;

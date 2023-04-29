@@ -28,7 +28,7 @@ export default function UserApi() {
     "Users",
     async () => {
       return await axios
-        .get("/me5a/api/user")
+        .get("/portfolio/me5a/api/user")
         .then((res) => res.data);
     }
   );
@@ -37,7 +37,7 @@ export default function UserApi() {
       setRegisterLoading(true);
       const EditFunction = async () => {
         try {
-          const reqdata = await fetch(`/me5a/api/user/${id}`);
+          const reqdata = await fetch(`/portfolio/me5a/api/user/${id}`);
           const res = await reqdata.json();
           setuserEdit(await res);
           setRegisterLoading(false);
@@ -61,7 +61,7 @@ export default function UserApi() {
   const handleUpdate = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`/me5a/api/user/${id}`, userEdit)
+      await axios.put(`/portfolio/me5a/api/user/${id}`, userEdit)
       setIsShown(null)
       refetch()
     } catch (err) {
@@ -77,7 +77,7 @@ export default function UserApi() {
     setRegisterLoading(true);
     try {
       console.log(id);
-      await axios.delete(`/me5a/api/user/${id}`);
+      await axios.delete(`/portfolio/me5a/api/user/${id}`);
       setRegisterLoading(false);
       refetch();
     } catch (error) {
@@ -97,7 +97,7 @@ export default function UserApi() {
     };
     try {
       const res = await axios.post(
-        "/me5a/api/user/register",
+        "/portfolio/me5a/api/user/register",
         formData
       );
       setIsShown(null);

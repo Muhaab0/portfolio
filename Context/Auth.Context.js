@@ -18,7 +18,7 @@ export const AuthProvider = ({children}) => {
         e.preventDefault()
         setIsLoading(true);
         try {
-            const res = await axios.post("me5a/api/user/login",formData)
+            const res = await axios.post("portfolio/me5a/api/user/login",formData)
             setUserData(res.data)
             setUserToken(res.data.token);
             localStorage.setItem("userData", JSON.stringify(userData))

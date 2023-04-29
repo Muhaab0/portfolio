@@ -22,7 +22,7 @@ export default function Contact() {
           message: message
         }
         try {
-          const res = await axios.post("me5a/api/contact",formData)
+          const res = await axios.post("portfolio/me5a/api/contact",formData)
           setRegisterLoading(false)
           setRegisterError("Your Message has been sent")
         } catch (error) {

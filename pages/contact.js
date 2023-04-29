@@ -11,7 +11,7 @@ export default function Contact() {
     const [email, setEmail] = useState("")
     const [phone, setPhone] = useState("")
     const [message, setMessage] = useState("")
-
+        console.log(process.env.customKey);
     const PostRegister = async (e) => {
         e.preventDefault()
         setRegisterLoading(true)
@@ -22,7 +22,7 @@ export default function Contact() {
           message: message
         }
         try {
-          const res = await axios.post("portfolio/me5a/api/contact",formData)
+          const res = await axios.post("https://portofolionodejs-production.up.railway.app/api/contact",formData)
           setRegisterLoading(false)
           setRegisterError("Your Message has been sent")
         } catch (error) {

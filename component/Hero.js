@@ -14,6 +14,8 @@ export default function Hero() {
       .get("portfolio/me5a/api/platform")
       .then((res) => res.data);
     })
+
+    console.log(process.env.customKey);
     
 
   return (

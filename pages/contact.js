@@ -22,7 +22,7 @@ export default function Contact() {
           message: message
         }
         try {
-          const res = await axios.post("https://portofolionodejs-production.up.railway.app/api/contact",formData)
+          const res = await axios.post(`${process.env.customKey}/contact`,formData)
           setRegisterLoading(false)
           setRegisterError("Your Message has been sent")
         } catch (error) {

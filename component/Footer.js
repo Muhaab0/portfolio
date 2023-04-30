@@ -8,7 +8,7 @@ export default function Footer() {
     "platforme",
     async () => {
       return await axios
-        .get("portfolio/me5a/api/platform")
+        .get(`${process.env.customKey}/platform`)
         .then((res) => res.data);
     })
 

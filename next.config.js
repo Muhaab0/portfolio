@@ -2,7 +2,7 @@
 module.exports = {
     basePath:'/portfolio',
     env: {
-      customKey: 'my-value',
+      customKey: 'https://portofolionodejs-production.up.railway.app/api',
     },
 }
 

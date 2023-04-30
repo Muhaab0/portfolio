@@ -8,7 +8,7 @@ import Portofolio from '@/pages/portofolio';
 
 export default function PortofolioApi() {
   const { data , isLoading , isError ,error , refetch} = useQuery("Portofolio", async () => {
-      return await axios.get("portfolio/me5a/api/portofolio").then((res) => res.data);
+      return await axios.get(`${process.env.customKey}/portofolio`).then((res) => res.data);
   });
   const [isShown, setIsShown] = useState(null);
   const [RegisterErrors, setRegisterError] = useState();
@@ -44,7 +44,7 @@ export default function PortofolioApi() {
       setRegisterLoading(true)
       try {
         console.log(id);
-        await axios.delete(`portfolio/me5a/api/portofolio/${id}`)
+        await axios.delete(`${process.env.customKey}/portofolio/${id}`)
         setRegisterLoading(false)
         refetch()
       } catch (error) {
@@ -63,12 +63,10 @@ export default function PortofolioApi() {
       formData.append("name", registerName);
       formData.append("desc", registerDesc);
       formData.append("link", registerLink);
-
-
     try {
       const res = await axios({
         method: "post",
-        url: "/portfolio/me5a/api/portofolio",
+        url: `${process.env.customKey}/portofolio`,
         data: formData,
         "content-type": "multipart/form-data",
       });
@@ -92,7 +90,7 @@ export default function PortofolioApi() {
       const EditFunction = async () => {
 
         try {
-          const reqdata = await fetch(`/portfolio/me5a/api/portofolio/${id}`);
+          const reqdata = await fetch(`${process.env.customKey}/portofolio/${id}`);
           const res = await reqdata.json();
           setPortofolioEdit(await res);
           setRegisterLoading(false);
@@ -115,13 +113,13 @@ export default function PortofolioApi() {
   const handleUpdate = async (e) => {
     e.preventDefault();
 
-    await axios.put(`/portfolio/me5a/api/portofolio/${id}`, PortofolioEdit)
+    await axios.put(`${process.env.customKey}/portofolio/${id}`, PortofolioEdit)
     setIsShown(null)
     refetch()
     if (file) {      
       const formData = new FormData();
       formData.append("file", file);
-      await axios.put(`/portfolio/me5a/api/portofolio/${id}`, formData)
+      await axios.put(`${process.env.customKey}/portofolio/${id}`, formData)
       setIsShown(null)
       refetch()
     }

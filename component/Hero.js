@@ -11,11 +11,11 @@ export default function Hero() {
     "platform",
     async () => {
       return await axios
-      .get("portfolio/me5a/api/platform")
+      .get(`${process.env.customKey}/platform`)
       .then((res) => res.data);
     })
 
-    console.log(process.env.customKey);
+
     
 
   return (

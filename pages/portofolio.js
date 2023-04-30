@@ -8,7 +8,7 @@ console.log(process.env.apiLink);
 
 export default function Portofolio() {
   const { data , isLoading , isError ,error} = useQuery("portofolio", async () => {
-    return await axios.get("https://portofolionodejs-production.up.railway.app/api//portofolio").then((res) => res.data);
+    return await axios.get(`${process.env.customKey}/portofolio`).then((res) => res.data);
 });
 
 

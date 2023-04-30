@@ -7,7 +7,7 @@ import { ArrowBack } from '@mui/icons-material';
 
 export default function PlatFormApi() {
     const { data , isLoading , isError ,error ,refetch} = useQuery("platforms", async () => {
-        return await axios.get("https://portofolionodejs-production.up.railway.app/api/platform").then((res) => res.data);
+        return await axios.get(`${process.env.customKey}/platform`).then((res) => res.data);
     });
     const [isShown, setIsShown] = useState(null);
     const [RegisterErrors, setRegisterError] = useState();
@@ -21,7 +21,7 @@ export default function PlatFormApi() {
     const handleDelete = async (id) => {
       try {
         console.log(id);
-        await axios.delete(`https://portofolionodejs-production.up.railway.app/api/platform/${id}`)
+        await axios.delete(`${process.env.customKey}/platform/${id}`)
         refetch()
       } catch (error) {
         console.log(error);
@@ -38,7 +38,7 @@ export default function PlatFormApi() {
         whatsup: registerWhatsup
       }
       try {
-        await axios.post("https://portofolionodejs-production.up.railway.app/api/latform",formData)
+        await axios.post(`${process.env.customKey}/latform`,formData)
         setIsShown(null)
         setRegisterLoading(false)
         refetch()

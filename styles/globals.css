@@ -125,7 +125,11 @@ body {
         padding: 0 5px!important;
     }
     .LoginBut {
-    padding: 7px 10px!important;
+    padding: 8px 12px!important;
+    
+    }
+    .inicio {
+        height: 95vh;
     }
     .nav-responsive {
         padding: 2px 5px;

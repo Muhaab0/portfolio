@@ -60,7 +60,7 @@ body {
   }
   .skills .fila .col,.sobremi .fila .col{
     padding:0!important;
-      width: 85%!important;
+      width: 90%!important;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -83,9 +83,6 @@ body {
 
   .curriculum .fila{
       display: block;
-  }
-  .curriculum .fila .col{
-      width: 90%;
   }
   .curriculum .fila .derecha{
       margin-left: 20px;
@@ -123,8 +120,12 @@ body {
     .NavRightSection {
         gap: 10px!important;
     }
+    .curriculum .fila .col {
+        width: 100%!important;
+        padding: 0 5px!important;
+    }
     .LoginBut {
-        padding: 5px 5px;
+    padding: 7px 10px!important;
     }
     .nav-responsive {
         padding: 2px 5px;
@@ -136,10 +137,22 @@ body {
         padding: 15px 5px;
     }
     .inicio .contenido-banner img {
-        width: 75%;
+        width: 70%!important;
         margin: auto;
-        height: 225px;
+        height: 215px!important;
         margin-top: 45px!important;
+    }
+    .inicio .contenido-banner h1 {
+        font-size: 34px;
+    }
+    .sobremi {
+        padding: 0px 50px!important;
+    }
+    .sobremi h2 , .skills h2 , .curriculum h2 {
+        font-size: 40px!important;
+    }
+    .sobremi button {
+        padding: 8px 12px!important;
     }
     
 }

@@ -3,6 +3,7 @@ import { Facebook , LinkedIn, WhatsApp, GitHub, Twitter , KeyboardDoubleArrowUp}
 import { useQuery } from 'react-query';
 import axios from 'axios';
 import { CircularProgress } from '@mui/material';
+import Link from 'next/link';
 export default function Footer() {
   const { data, isLoading, isError, error, refetch } = useQuery(
     "platforme",
@@ -15,9 +16,9 @@ export default function Footer() {
     
   return (
      <footer>
-    <a href="#Navbar" className="arriba">
+    <Link href="/#About" className="arriba">
         <KeyboardDoubleArrowUp />
-    </a>
+    </Link>
             {isLoading ? <div className='Loading'><CircularProgress/> </div>  : "" }
             {isError? <div className='error'>{error.message}</div>:""}
     {data?.map((dat)=>(

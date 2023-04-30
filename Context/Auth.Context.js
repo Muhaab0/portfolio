@@ -18,7 +18,7 @@ export const AuthProvider = ({children}) => {
         e.preventDefault()
         setIsLoading(true);
         try {
-            const res = await axios.post(`${process.env.customKey}/login`,formData)
+            const res = await axios.post(`${process.env.customKey}/user/login`,formData)
             setUserData(res.data)
             setUserToken(res.data.token);
             localStorage.setItem("userData", JSON.stringify(userData))

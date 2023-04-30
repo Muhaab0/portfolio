@@ -102,8 +102,19 @@
 }
 
 .inputContainer {
-    width: 280px;
+    position: relative;
 }
+
+.inputContainer svg {
+    cursor: pointer;
+    position: absolute;
+    right: -30px;
+    top: 23%;
+}
+
+/* .inputContainer {
+    width: 280px;
+} */
 
 
 .formUpdate {
@@ -112,6 +123,7 @@
 
 .itemEdit input ,textarea{
     margin-top: 5px;
+    font-size: 16px;
     margin-bottom: 10px;
     border-radius: 5px;
     padding: 10px;
@@ -119,7 +131,7 @@
     color: white;
     border: solid 1px white;
     outline: none;
-    width: 250px;
+    width: 100%;
 }
 
 
@@ -177,14 +189,9 @@ input[type="submit"] {
     .EditImg {
         margin: auto;
     }
-    .itemEdit input, textarea {
-        width: 200px;
-    }
 }
 
-@media(max-width:800px) {
 
-}
 
 @media (max-width:609px) {
     
@@ -200,6 +207,7 @@ input[type="submit"] {
         flex-direction: column;
         text-align:center;
     }    
+
 }
 
 

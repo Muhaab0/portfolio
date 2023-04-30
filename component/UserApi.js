@@ -166,6 +166,7 @@ export default function UserApi() {
         </>
       )}
       {isShown && (
+        //modify
         <>
         {RegisterLoading ? <div className='Loading'><CircularProgress/> </div> :""}
       {RegisterErrors? <div className='error'>{RegisterErrors}</div> : (
@@ -174,7 +175,7 @@ export default function UserApi() {
             <ArrowBack />
           </div>
           <form onSubmit={handleUpdate} className="itemEdit formUpdate  flex column ">
-            <div className="flex align-center  gap10">
+            <div className=" inputContainer flex align-center  gap10">
             <input
               type="text"
               disabled={NameisDisabled}
@@ -185,7 +186,7 @@ export default function UserApi() {
               />
               <Settings style={{cursor:"pointer"}} onClick={()=>setNameisDisabled(!NameisDisabled)}  />
               </div>
-              <div className="flex align-center gap10">
+              <div className=" inputContainer flex align-center gap10">
             <input
               type="email"
               disabled={EmailisDisabled}
@@ -196,7 +197,7 @@ export default function UserApi() {
             />
               <Settings style={{cursor:"pointer"}}  onClick={()=>setEmailisDisabled(!EmailisDisabled)} />
               </div>
-              <div className="flex  align-center  gap10">
+              <div className=" inputContainer flex  align-center  gap10">
             <input
               type="text"
               placeholder="isAdmin"

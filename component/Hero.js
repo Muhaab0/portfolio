@@ -25,7 +25,7 @@ export default function Hero() {
                 <img src={HeroImg.src} alt=""/>
                 
             </div>
-            <h1 style={{fontSize:"36px"}}>MUHAAB MEDHAT</h1>
+            <h1>MUHAAB MEDHAT</h1>
             <h2>Software Engineer - Full Stck Developer</h2>
             {isLoading ? <div className='Loading'><CircularProgress/> </div>  : "" }
             {isError? <div className='error'>{error.message}</div>:""}

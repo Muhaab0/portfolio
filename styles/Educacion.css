@@ -61,6 +61,7 @@
 .curriculum .fila .izq{
     border-right: 2px solid #1CB698;
     margin-right: 20px;
+    margin-left: 15px;
 }
 .curriculum .fila .der{
     border-left: 2px solid #1CB698;
